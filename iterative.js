@@ -11,15 +11,13 @@ const loadFile = () => {
 
 const Main = () => {
   const table = [];
-  const values = [];
-  const weights = [];
+  const values = [0];
+  const weights = [0];
   const file = loadFile();
   const capacity = process.argv[3];
 
   let arr = file.trim().split('\n');
   const n = arr.length;
-  values.push(0);
-  weights.push(0);
   for(let e = 0; e < n; e++) {
     out = arr[e].split( ' ' );
     values.push(+out[2]);
